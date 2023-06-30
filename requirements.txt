@@ -1,0 +1,7 @@
+numpy==1.22
+scikit-learn
+matplotlib
+tensorflow
+keras==2.12.0
+opencv-python
+tflearn
