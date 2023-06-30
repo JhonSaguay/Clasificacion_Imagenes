@@ -21,15 +21,15 @@ Hemos realizado el analisis con tres diferentes modelos de entrenamiento: KNeigh
 
 | Modelos  | Porcentaje aciertos Test Data | Porcentaje aciertos Train Data|
 | ------------- | ------------- | ------------- |
+| CNN  | 90.49  | 98.22 |
 | KNeighbors  | 56.54  | 73.67 |
 | DecisionTree  | 11.73  | 100 |
-| CNN  | 5.56  | 58.05 |
 
 
-Para los modelos KNeighbors y DecisionTree las imágenes fueron transformadas de BGR a RGB, para conservar los colores originales de la imagen, además se utilizó una técnica de normalización la cuál nos permite bajar el nivel de intersidad y mejorar el contraste de las imágnes.
+Para los modelos KNeighbors y DecisionTree las imágenes fueron transformadas de BGR a RGB, para conservar los colores originales de la imagen, además se utilizó una técnica de normalización la cuál nos permite bajar el nivel de intersidad y mejorar el contraste de las imágnes. Comparando estos dos modelos, el modelo KNeighbors tuvo mejores resultados de manera general, a pesar que el modelo DecisionTree tuvo un mejor entrenamiento de acuerdo con la matriz de confusión. Al evaluar el modelo de DecisionTree los resultados de la predición de la base de test fueron muy por debajo a los de KNeighbors.
 
-Por otro lado para el modelo CNN, no se utilizó la técnica de normalización en la imágenes ya que para este modelo se hizo uso de la librería ImageDataGenerator, una librería que nos ayuda a realizar pequeñas modificaciones a las imágenes tales como rotarlas, añadir (o quitar) zoom, cambiar el brillo y la intensidad de los canales, e inclinarlas.
+Por otro lado para el modelo CNN, se decidió usar una librería de keras para leer las imágenes que nos permiten entrenar más fácilmente la red neuronal. La complejidad de este modelo consiste en encontrar la mejor configuración para conseguir el mejor resultado. En este caso el dropout de 0.5 fue un parámetro importante, ya que permitó ajustar de la mejor manera la red neuronal, y evitar un sobreajuste.
 
-KNeighbors obtuvo los mejores resultados de manera general, a pesar que el modelo DecisionTree tuvo un mejor entrenamiento. Al evaluar el modelo de DecisionTree los resultados de la predición de la base de test fueron muy por debajo comparado con KNeighbors. En el caso del modelo CNN no obtuvo buenos resultados, esto puede deberse a la cantidad de datos con la que se entrenó a ésta red.
+De acuerdo con los resultados obtenidos, el modelo CNN es el mejor modelo para clasificar este tipo de imágenes.
 
-Podemos concluir que para un mejorar los resultados se necesita un mayor número de datos para entrenar a los modelos. Además se pudo notar que para la Clase_1 no existían datos de entrenamiento, lo que disminuye la acertividad de predicción en los modelos.
+Podemos concluir que para mejorar los resultados es necesario un mayor número de datos de entrenamiento para los modelos. Además se pudo notar que para varias Clases los datos no eran los más óptimos, lo que disminuye la eficacia de la predicción de los modelos.
