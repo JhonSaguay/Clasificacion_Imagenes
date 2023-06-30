@@ -1,5 +1,8 @@
 # Clasificacion_Imagenes
 Práctica Final - Clasificación de Imagenes
+Autor: Jhonatan Saguay
+
+Data set - https://drive.google.com/file/d/1Z5DJ-MVS1TQV1kow9mIFWTec-ZdOLRLF/view?usp=sharing
 
 # Requerimientos
 Versión python 3.8.10
